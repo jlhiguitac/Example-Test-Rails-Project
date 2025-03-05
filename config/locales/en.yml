@@ -1,0 +1,45 @@
+en:
+  activerecord:
+    models:
+      product: Product
+    attributes:
+      product:
+        title: "Title"
+        description: "Description"
+        price: "Price"
+        photo: "Photo"
+    errors:
+      models:
+        product:
+          attributes:
+            title:
+              blank: "It can't be blank"
+            description:
+              blank: "It can't be blank"
+            price:
+              blank: "It can't be blank"
+              not_a_number: "It must be a number"
+  common:
+    confirm: "Are you sure?"
+  products:
+    edit:
+      title: "Edit a product"
+      description: "Here you can edit the product"
+    new:
+      title: "New Product"
+      description: "Here you can create a new product"
+    index:
+      title: "Products List"
+      description: "Here you can see all the products"
+    create:
+      created: "Product created successfully."
+    update:
+      updated: "Product updated successfully."
+    destroy:  
+      destroyed: "Product deleted successfully."
+    show:
+      edit: "Edit product"
+      destroy: "Delete product"
+  shared:
+    header:
+      title: 'Add product'

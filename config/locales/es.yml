@@ -1,0 +1,48 @@
+es:
+  activerecord:
+    models:
+      product: Producto
+    attributes:
+      product:
+        title: "Título"
+        description: "Descripción"
+        price: "Precio"
+        photo: "Foto"
+    errors:
+      models:
+        product:
+          attributes:
+            title:
+              blank: "No puede estar vacío"
+            description:
+              blank: "No puede estar vacía"
+            price:
+              blank: "No puede estar vacío"
+              not_a_number: "Debe ser un número"
+  common:
+    confirm: "Estas seguro?"
+  products:
+    edit:
+      title: "Editar Producto"
+      description: "Aquí puedes editar el producto"
+    new:
+      title: "Nuevo Producto"
+      description: "Aquí puedes crear un nuevo producto"
+    index:
+      title: "Listado de Productos"
+      description: "Aquí puedes ver todos los productos"
+    create:
+      created: "Producto creado con éxito."
+    update:
+      updated: "Producto actualizado con éxito."
+    destroy:  
+      destroyed: "Producto eliminado con éxito."
+    show:
+      edit: "Editar Producto"
+      destroy: "Eliminar Producto"
+  shared:
+    header:
+      title: 'Añadir producto'
+      
+
+  
