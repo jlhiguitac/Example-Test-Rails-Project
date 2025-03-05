@@ -1,24 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+These project have an example about how to develop a CRUD website with some routes. 
 
-Things you may want to cover:
+## Things you may want to cover:
 
 * Ruby version 3.1.2
 
 * System dependencies
 
-* Configuration nnnn
+## Configuration
 
-* Database creation
+* Database creation: You must have a posgresql service and setup the file database.yml.
 
-* Database initialization
+* How to run the test suite: use the next command:
+```
+$ bin/rails test test/controllers/home_controller_test.rb -v
 
-* How to run the test suite
+```
+* Run instructions
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Use:
+```
+$ rails server
+```
