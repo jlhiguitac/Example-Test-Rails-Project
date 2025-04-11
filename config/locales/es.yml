@@ -21,6 +21,7 @@ es:
               not_a_number: "Debe ser un número"
   common:
     confirm: "Estas seguro?"
+    back: "Volver"
   products:
     edit:
       title: "Editar Producto"
@@ -42,7 +43,29 @@ es:
       destroy: "Eliminar Producto"
   shared:
     header:
-      title: 'Añadir producto'
+      add: 'Añadir producto'
+      categories: 'Categorías'
+  categories:
+    category:
+      edit: "Editar"
+      delete: "Eliminar"
+    index:
+      title: "Listado de Categorías"
+      edit: "Editar Producto"
+      delete: "Eliminar Producto"
+      description: "Aquí puedes ver todas las categorías"
+    new:
+      title: "Nueva Categoría"
+      description: "Aquí puedes crear una nueva categoría"
+    edit:
+      title: "Editar Categoría"
+      description: "Aquí puedes editar la categoría"
+    create:
+      created: "Categoría creada con éxito."
+    update:
+      updated: "Categoría actualizada con éxito."
+    destroy:
+      destroyed: "Categoría eliminada con éxito."
       
 
   

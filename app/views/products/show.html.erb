@@ -10,6 +10,6 @@
 <!-- Con turbo estamos cambiando la peticion de un 302 a un 303 -->
 <%= link_to t(".destroy"), product_path(@product), 
 data: {turbo_method: :delete, 
-turbo_confirm: t("common.confirm") 
+    turbo_confirm: t("common.confirm") 
 }
 %>
