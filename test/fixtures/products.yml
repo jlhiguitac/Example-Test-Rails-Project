@@ -4,8 +4,16 @@ ps4:
   title: PS4 Fat
   description: PS4 Fat 500GB en buen estado
   price: 150
+  category: videogames
 
 switch:
   title: Nintendo Switch
   description: Le falla el lector de tarjeta SD
   price: 195
+  category: videogames
+
+macbook:
+  title: Macbook Pro 2015
+  description: Macbook Pro 2015 en buen estado
+  price: 800
+  category: computers

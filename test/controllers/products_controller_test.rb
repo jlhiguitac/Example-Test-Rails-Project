@@ -4,7 +4,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   test "render a list of products" do
     get products_path
     assert_response :success
-    assert_select ".product", 2
+    assert_select ".product", 3
   end
 
   test "render a detailed product page" do
@@ -33,7 +33,8 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
       product: {
         title: "Nintendo 64",
         description: "Le faltan los cables",
-        price: 45
+        price: 45,
+        category_id: categories(:videogames).id
       }
     }
     assert_redirected_to products_path
@@ -44,7 +45,8 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
       product: {
         title: "",
         description: "Le faltan los cables",
-        price: 45
+        price: 45,
+        category_id: categories(:videogames).id
       }
     }
     assert_response :unprocessable_entity
