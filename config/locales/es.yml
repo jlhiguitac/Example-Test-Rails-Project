@@ -31,6 +31,9 @@ es:
       description: "Aquí puedes crear un nuevo producto"
     index:
       title: "Listado de Productos"
+      all: "Todos"
+      min_price: "Precio mínimo"
+      max_price: "Precio máximo"
       description: "Aquí puedes ver todos los productos"
     create:
       created: "Producto creado con éxito."
