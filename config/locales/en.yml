@@ -34,6 +34,7 @@ en:
       all: "All"
       min_price: "Min Price"
       max_price: "Max Price"
+      query_text: "Search"
       description: "Here you can see all the products"
     create:
       created: "Product created successfully."
