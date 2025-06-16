@@ -15,8 +15,17 @@ class ProductsController < ApplicationController
     if params[:query_text].present?
       @products = @products.search_full_text(params[:query_text])
     end
+
     orders = Product::ORDER_BY.fetch(params[:order_by], Product::ORDER_BY["newest"])
+
     @products = @products.order(orders).load_async
+
+    @pagy, @products = pagy_countless(@products, limit: 6)
+
+    respond_to do |format|
+      format.html
+      format.turbo_stream
+    end
   end
 
   def show
