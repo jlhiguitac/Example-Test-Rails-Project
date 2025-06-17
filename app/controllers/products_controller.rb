@@ -16,11 +16,11 @@ class ProductsController < ApplicationController
       @products = @products.search_full_text(params[:query_text])
     end
 
-    orders = Product::ORDER_BY.fetch(params[:order_by], Product::ORDER_BY["newest"])
+    order_by = Product::ORDER_BY.fetch(params[:order_by], Product::ORDER_BY["newest"])
 
-    @products = @products.order(orders).load_async
+    @products = @products.order(order_by).load_async
 
-    @pagy, @products = pagy_countless(@products, limit: 6)
+    @pagy, @products = pagy_countless(@products, limit: 12)
 
     respond_to do |format|
       format.html
