@@ -1,27 +1,37 @@
 es:
+  app_name: 'Vendelo'
+  meta_title: 'Compra y Vende productos de segunda mano'
   activerecord:
     models:
       product: Producto
+      user: Usuario
+      category: Categoría
     attributes:
+      category:
+        name: "Nombre"
+      user:
+        email: "Correo electrónico"
+        password: "Contraseña"
+        username: "Nombre de usuario"
       product:
         title: "Título"
         description: "Descripción"
         price: "Precio"
         photo: "Foto"
-    errors:
-      models:
-        product:
-          attributes:
-            title:
-              blank: "No puede estar vacío"
-            description:
-              blank: "No puede estar vacía"
-            price:
-              blank: "No puede estar vacío"
-              not_a_number: "Debe ser un número"
   common:
     confirm: "Estas seguro?"
     back: "Volver"
+    not_logged_in: "No has iniciado sesión."
+  authentication:
+    users:
+      create:
+        created: "Cuenta de usuario creado con éxito."
+    sessions:
+      create:
+        created: "Bienvenido! Has iniciado sesión con éxito." 
+        failed: "Login inválido. Por favor, inténtalo de nuevo." 
+      destroy:
+        destroyed: "Has cerrado sesión con éxito."  
   products:
     edit:
       title: "Editar Producto"
@@ -51,6 +61,9 @@ es:
     header:
       add: 'Añadir producto'
       categories: 'Categorías'
+      login: 'Ingresar'
+      logout: 'Salir'
+      register: 'Registrarse'      
   categories:
     category:
       edit: "Editar"

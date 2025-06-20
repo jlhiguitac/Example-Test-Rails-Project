@@ -22,4 +22,9 @@ Rails.application.routes.draw do
 
   # esta linea define todas las rutas para categories, tiene show, create, destroy, update, edit, new
   resources :categories, except: :show
+
+  namespace :authentication, path: "", as: "" do
+    resources :users, only: [ :new, :create ], path: "/register", path_names: { new: "/" }
+    resources :sessions, only: [ :new, :create, :destroy ], path: "/login", path_names: { new: "/" }
+  end
 end

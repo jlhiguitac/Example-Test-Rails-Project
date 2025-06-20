@@ -6,10 +6,9 @@
 
 <h2 >Precio: <span class="price"><%= @product.price%>$</span></h2>
 
-<%= link_to t(".edit"), edit_product_path(@product) %>
+<%= link_to t(".edit"), edit_product_path(@product) if @product.user == Current.user %>
 <!-- Con turbo estamos cambiando la peticion de un 302 a un 303 -->
 <%= link_to t(".destroy"), product_path(@product), 
 data: {turbo_method: :delete, 
     turbo_confirm: t("common.confirm") 
-}
-%>
+} if @product.user == Current.user %>

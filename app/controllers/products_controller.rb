@@ -1,13 +1,9 @@
 class ProductsController < ApplicationController
+  skip_before_action :protect_pages, only: [ :index, :show ]
   def index
     # pp params[:category_id]
     @categories = Category.all.order(name: :asc).load_async
-    @pagy, @products = pagy_countless(FindProducts.new.call(params).load_async, limit: 12)
-
-    respond_to do |format|
-      format.html
-      format.turbo_stream
-    end
+    @pagy, @products = pagy_countless(FindProducts.new.call(product_params_index).load_async, limit: 12)
   end
 
   def show
@@ -46,6 +42,9 @@ class ProductsController < ApplicationController
   private
   def product_params
     params.require(:product).permit(:title, :description, :price, :photo, :category_id)
+  end
+  def product_params_index
+    params.permit(:category_id, :min_price, :max_price, :query_text, :order_by, :page)
   end
   def product
     @product = Product.find(params[:id])
